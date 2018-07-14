@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" ng-app="dashboardApp" ng-init="init()" ng-controller="dashboardCtrl">
+
+    <!-- Page Heading -->
+    <h1 class="my-4">
+        Dashboards
+    </h1>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="input-group">
+                <input type="text" ng-model="Name" class="form-control" placeholder="" >
+                <span class="input-group-btn">
+                    <button class="btn btn-success" type="button" ng-click="Add()">Create a new Dashboard</button>
+                </span>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 portfolio-item" ng-repeat="dashboard in DashboardList">
+            <div class="card h-100">
+                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <div class="card-body">
+                    <h4 class="card-title">
+                        <a ng-hide="dashboard.EditMode" href="/Tasks/Index/{{dashboard.ID}}">{{dashboard.Name}}</a>
+                        @*<span ng-hide="dashboard.EditMode">{{dashboard.Name}}</span>*@
+                        <input type="text" ng-model="dashboard.Name" ng-show="dashboard.EditMode" />
+                    </h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+                    <a class="Edit" href="javascript:;" ng-hide="dashboard.EditMode" ng-click="Edit($index)">Edit</a>
+                    <a class="Update" href="javascript:;" ng-show="dashboard.EditMode" ng-click="Update($index)">Update</a>
+                    <a class="Cancel" href="javascript:;" ng-show="dashboard.EditMode" ng-click="Cancel($index)">Cancel</a>
+                    <a href="javascript:;" ng-hide="dashboard.EditMode" ng-click="Delete(dashboard.ID)">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+</div>
+
+    <script src="~/Content/js/Dashboard.js"></script>
+ 
