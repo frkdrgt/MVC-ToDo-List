@@ -49,7 +49,7 @@ namespace MvcToDoListApp.Service
                                         sc.Port = 587;
                                         sc.Host = "smtp.gmail.com";
                                         sc.EnableSsl = true;
-                                        sc.Credentials = new NetworkCredential("codexscreen@gmail.com", "320210650");
+                                        sc.Credentials = new NetworkCredential("codexscreen@gmail.com", "***");
                                         MailMessage mail = new MailMessage();
                                         mail.From = new MailAddress("codexscreen@gmail.com", "Task Reminder");
                                         mail.To.Add(user.Mail);
