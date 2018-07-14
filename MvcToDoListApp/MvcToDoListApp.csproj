@@ -127,6 +127,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\img\todo-bg.png" />
     <Content Include="Content\js\Task.js" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css" />
     <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css" />
@@ -224,6 +225,7 @@
     <Content Include="Content\vendor\jquery\jquery.slim.min.map" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Tasks\Index.cshtml" />
+    <Content Include="Db\TodoApp.bak" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

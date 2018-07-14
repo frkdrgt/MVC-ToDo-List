@@ -82,7 +82,8 @@ namespace MvcToDoListApp.Controllers
         public ActionResult Delete(Guid id)
         {
             Dashboard deletedDashboard = db.Dashboards.Find(id);
-            if(deletedDashboard != null)
+            
+            if (deletedDashboard != null)
             {
                 db.Dashboards.Remove(deletedDashboard);
                 db.SaveChanges();

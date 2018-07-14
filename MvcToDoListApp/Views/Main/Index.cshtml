@@ -20,14 +20,14 @@
         </div>
         <div class="col-lg-4 col-sm-6 portfolio-item" ng-repeat="dashboard in DashboardList">
             <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="~/Content/img/todo-bg.png" alt=""></a>
                 <div class="card-body">
                     <h4 class="card-title">
                         <a ng-hide="dashboard.EditMode" href="/Tasks/Index/{{dashboard.ID}}">{{dashboard.Name}}</a>
-                        @*<span ng-hide="dashboard.EditMode">{{dashboard.Name}}</span>*@
+                        
                         <input type="text" ng-model="dashboard.Name" ng-show="dashboard.EditMode" />
                     </h4>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+                    <p class="card-text"></p>
                     <a class="Edit" href="javascript:;" ng-hide="dashboard.EditMode" ng-click="Edit($index)">Edit</a>
                     <a class="Update" href="javascript:;" ng-show="dashboard.EditMode" ng-click="Update($index)">Update</a>
                     <a class="Cancel" href="javascript:;" ng-show="dashboard.EditMode" ng-click="Cancel($index)">Cancel</a>
